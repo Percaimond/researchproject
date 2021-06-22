@@ -7,7 +7,7 @@ public class ConveyorMove : MonoBehaviour
 
     public GameObject belt;
     public Transform endpoint;
-    public float speed;
+    public float speed = 2;
     // Start is called before the first frame update
     void OnTriggerStay(Collider other)
 	{
