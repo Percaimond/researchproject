@@ -21,9 +21,11 @@ public class placeObject : MonoBehaviour
 
         if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity)){
             ghost.transform.position = hit.point;
-			if (Input.GetMouseButtonDown(0))
+            //ghost.transform.position = new Vector3(hit.point.x, hit.point.y+1, hit.point.z);
+            if (Input.GetMouseButtonDown(0))
 			{
-                Instantiate(placed, ghost.transform.position, ghost.transform.rotation);
+                
+                Instantiate(placed, new Vector3(hit.point.x, hit.point.y + 0.74f, hit.point.z), ghost.transform.rotation);
 			}
 		}
     }
